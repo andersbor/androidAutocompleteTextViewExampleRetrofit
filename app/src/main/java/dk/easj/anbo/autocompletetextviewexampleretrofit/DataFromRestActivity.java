@@ -19,7 +19,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class DataFromRestActivity extends AppCompatActivity {
     private static final String LOG_TAG = "MYFISH";
     private static final String BASE_URI = "http://anbo-fish.azurewebsites.net/Service1.svc/";
-    Retrofit retrofit = new Retrofit.Builder()
+    private final Retrofit retrofit = new Retrofit.Builder()
             .baseUrl(BASE_URI)
             .addConverterFactory(GsonConverterFactory.create())
             // https://futurestud.io/tutorials/retrofit-2-adding-customizing-the-gson-converter
